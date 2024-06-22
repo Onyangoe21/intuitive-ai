@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    background: linear-gradient(120deg, #000000, #333333); /* Gradient background */
+    color: #FFFFFF; /* White text */
+    font-family: 'Verdana', sans-serif';
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s ease;
+}
+
+body:hover {
+    background: linear-gradient(120deg, #333333, #000000); /* Gradient background hover effect */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #00FF00, #32CD32); /* Base gradient green */
+    background-image: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 40px,
+        transparent 40px,
+        transparent 80px
+    );
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease;
+    position: relative; /* Required for decorative elements */
+    animation: backgroundMove 5s linear infinite; /* Animation for background */
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 160px; /* Adjust to match the repeating pattern */
+    }
+}
+
+header h1 {
+    color: transparent; /* Make text transparent */
+    margin: 0;
+    text-shadow: 
+        1px 1px 2px #32CD32,  /* light green for the 3D effect */
+        1px 1px 2px #32CD32,
+        2px 2px 4px #000000;  /* black for depth */
+    font-size: 2.5em;
+    font-weight: bold;
+    -webkit-text-stroke: 1px #00FF00; /* thin green outline */
+}
+
+/* Decorative element in the header */
+header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #32CD32, #00FF00);
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #FFFFFF; /* White links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00FF00; /* Green on hover */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: transparent; /* Make text transparent */
+    text-shadow: 
+        1px 1px 2px #32CD32,  /* light green for the 3D effect */
+        1px 1px 2px #32CD32,
+        2px 2px 4px #000000;  /* black for depth */
+    -webkit-text-stroke: 1px #00FF00; /* thin green outline */
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: #333333; /* Dark gray for sections */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px); /* Lift section on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensify shadow on hover */
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(90deg, #00FF00, #32CD32); /* Gradient green for footer */
+    color: #000000; /* Black text for footer */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+a {
+    color: #00FF00; /* Vibrant green for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #FFFFFF; /* White on hover */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    animation: fadeIn 1s ease-in-out;
+}
