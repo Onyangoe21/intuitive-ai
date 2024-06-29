@@ -8,6 +8,12 @@ body {
     transition: background 0.5s ease;
 }
 
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
 body:hover {
     background: linear-gradient(120deg, #333333, #000000); /* Gradient background hover effect */
 }
